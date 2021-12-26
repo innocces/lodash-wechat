@@ -3,6 +3,7 @@
 </p>
 
 <h1 align="center">lodash-wechat</h1>
+<p align="center"><a href="https://lodash-wechat.vercel.app/">doc-site</a></p>
 <p align="center">
 some lodash function for wechat.
 <p>
@@ -11,5 +12,5 @@ some lodash function for wechat.
 <p>
 
 <p align="center">
-修改部分代码供小程序端使用。(用到上会更新啥。所以不是全部的包~)
+修改部分代码供小程序端使用。(用的上会更新啥。所以不是全部的包~)
 <p>

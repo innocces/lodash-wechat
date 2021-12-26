@@ -1,7 +1,11 @@
 {
-  "private": true,
   "name": "lodash-wechat",
   "version": "1.0.0",
+  "keywords": [
+    "lodash",
+    "wechat",
+    "tools"
+  ],
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -13,8 +17,14 @@
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build"
   },
+  "main": "lib/index.js",
   "module": "es/index.js",
-  "typings": "es/index.d.ts",
+  "types": "dist/src/index.d.ts",
+  "unpkg": "dist/lodash-wechat.js",
+  "jsdelivr": "dist/lodash-wechat.js",
+  "sideEffects": false,
+  "author": "innocces<jiangjiangjiangxi@gmail.com>(https://github.com/innocces)",
+  "typings": "dist/src/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -26,22 +36,35 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "dependencies": {
-    "react": "^16.12.0 || ^17.0.0"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
+  "homepage": "https://github.com/innocces/lodash-wechat",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
     "@umijs/fabric": "^2.8.1",
+    "@umijs/plugin-antd": "^0.15.0",
     "@umijs/test": "^3.0.5",
+    "antd": "^4.17.4",
+    "babel-plugin-import": "^1.13.3",
     "dumi": "1.1.37",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
+    "react": "17.0.2",
     "yorkie": "^2.0.0"
   },
+  "license": "MIT",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "package.json",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "platform": "github",

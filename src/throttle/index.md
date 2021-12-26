@@ -2,14 +2,14 @@
 group:
   title: 函数
   path: /function
-title: debounce 防抖动
+title: throttle 节流
 ---
 
 ## 用法
 
 ```js | pure
-import { debounce } from 'lodash-wechat';
-debounce(func, [wait=0], [options=])
+import { throttle } from 'lodash-wechat';
+throttle(func, [(wait = 0)], [(options = {})]);
 ```
 
 ## 使用示例
@@ -17,13 +17,13 @@ debounce(func, [wait=0], [options=])
 ```tsx
 import React, { useCallback, useState, useRef } from 'react';
 import { Input, Typography, Divider } from 'antd';
-import { debounce } from 'lodash-wechat';
+import { throttle } from 'lodash-wechat';
 
 export default () => {
   const [value, setValue] = useState<string>('');
   const searchTime = useRef<string>(Date());
   const handleSearch = useCallback(
-    debounce((inputValue: string) => {
+    throttle((inputValue: string) => {
       setValue(inputValue);
       searchTime.current = Date();
     }, 200),
@@ -32,7 +32,7 @@ export default () => {
   return (
     <Typography>
       <Input
-        placeholder="这是一个带有防抖的搜索框"
+        placeholder="这是一个带有节流的搜索框"
         onChange={(e) => handleSearch(e.target.value)}
       />
       <Divider />
